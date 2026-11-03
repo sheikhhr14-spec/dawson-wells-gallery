@@ -19,17 +19,18 @@ function Home() {
   const featured = ARTWORKS.slice(0, 6);
   return (
     <>
-      <section className="relative h-[88vh] min-h-[560px] overflow-hidden">
+      <section className="relative h-[calc(100vh-9rem)] min-h-[620px] overflow-hidden">
         <img src={IMAGES.hero} alt="Ochre Threshold, oil and wax on canvas" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent" />
         <div className="relative mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-16 text-background">
           <p className="text-xs uppercase tracking-[0.3em] opacity-80">Now on view · Surface & Silence</p>
-          <h1 className="mt-4 max-w-4xl text-6xl leading-[0.95] md:text-9xl">Art that asks to be <em>seen slowly.</em></h1>
+          <div className="mt-6 h-px w-20 bg-accent" />
+          <h1 className="mt-6 max-w-4xl text-6xl leading-[0.92] md:text-[8.5rem]">Art that asks to be <em>seen slowly.</em></h1>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link to="/artworks" className="inline-flex items-center gap-2 bg-background px-7 py-4 text-sm text-foreground hover:bg-accent hover:text-accent-foreground">
+            <Link to="/artworks" className="inline-flex items-center gap-2 bg-background px-7 py-4 text-sm text-foreground tracking-[0.18em] uppercase text-xs transition hover:bg-accent hover:text-accent-foreground">
               Explore the collection <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link to="/contact" className="inline-flex items-center border border-background/60 px-7 py-4 text-sm hover:bg-background/10">
+            <Link to="/contact" className="inline-flex items-center border border-background/60 px-7 py-4 text-xs uppercase tracking-[0.18em] transition hover:bg-background/10">
               Plan a visit
             </Link>
           </div>
