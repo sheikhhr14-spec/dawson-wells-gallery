@@ -9,7 +9,7 @@ type S = { category?: CategorySlug };
 
 export const Route = createFileRoute("/artworks/")({
   validateSearch: (s: Record<string, unknown>): S => {
-    const c = s.category as string | undefined;
+    const c = s["category"] as string | undefined;
     return CATEGORIES.some((x) => x.slug === c) ? { category: c as CategorySlug } : {};
   },
   head: () => ({

@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/site-chrome";
 
 export const Route = createFileRoute("/contact")({
   validateSearch: (s: Record<string, unknown>): { artwork?: string } =>
-    typeof s.artwork === "string" ? { artwork: s.artwork } : {},
+    typeof s["artwork"] === "string" ? { artwork: s["artwork"] } : {},
   head: () => ({
     meta: [
       { title: "Contact & Visit — Dawson Wells Gallery" },

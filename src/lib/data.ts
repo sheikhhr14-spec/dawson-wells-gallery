@@ -64,7 +64,7 @@ const slugify = (s: string) =>
 
 export const ARTWORKS: Artwork[] = seed.map((a, i) => {
   const imgs = pool[a.category];
-  const first = imgs[i % imgs.length];
+  const first = imgs[i % imgs.length]!;
   const images = [first, ...imgs.filter((x) => x !== first), interior];
   return {
     ...a,
