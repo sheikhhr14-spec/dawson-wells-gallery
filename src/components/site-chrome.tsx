@@ -33,34 +33,34 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40">
       <div className="bg-primary text-primary-foreground">
-        <div className="mx-auto flex h-9 max-w-7xl items-center justify-between px-6 text-[0.68rem] uppercase tracking-[0.25em]">
+        <div className="mx-auto flex h-8 max-w-[1440px] items-center justify-between px-6 text-[0.6rem] font-medium uppercase tracking-[0.32em] md:px-12">
           <span className="opacity-80">Now on view — Surface &amp; Silence</span>
           <span className="hidden opacity-80 sm:block">Tue – Sat · 11:00 – 18:00</span>
         </div>
       </div>
-      <div className="border-b bg-background">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:flex-col md:gap-5">
-          <Link to="/" className="text-center leading-none">
-            <span className="block font-serif text-3xl tracking-tight md:text-4xl">Dawson <em className="text-accent">Wells</em></span>
-            <span className="mt-1 block text-[0.62rem] uppercase tracking-[0.5em] text-muted-foreground">Gallery · New York</span>
+      <div className="border-b bg-background/90 backdrop-blur-xl">
+        <div className="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-6 md:px-12">
+          <Link to="/" className="flex items-baseline gap-3 leading-none">
+            <span className="font-serif text-[1.9rem] tracking-tight">Dawson Wells</span>
+            <span className="hidden text-[0.6rem] font-medium uppercase tracking-[0.4em] text-muted-foreground sm:inline">New York</span>
           </Link>
-          <nav className="hidden items-center gap-1 md:flex">
+          <nav className="hidden items-center lg:flex">
             {NAV.map((n) => (
               <div key={n.label} className="group relative">
                 <L
                   to={n.to}
                   activeOptions={{ exact: n.to === "/" }}
-                  className="flex items-center gap-1 px-5 py-2 text-[0.72rem] uppercase tracking-[0.22em] transition-colors hover:text-accent"
-                  activeProps={{ className: "text-accent" }}
+                  className="relative flex items-center gap-1 px-5 py-7 text-[0.68rem] font-medium uppercase tracking-[0.24em] text-foreground/70 transition-colors hover:text-foreground after:absolute after:inset-x-5 after:bottom-5 after:h-px after:origin-left after:scale-x-0 after:bg-accent after:transition-transform hover:after:scale-x-100"
+                  activeProps={{ className: "!text-foreground after:!scale-x-100" }}
                 >
                   {n.label}
-                  {n.children && <ChevronDown className="h-3 w-3 opacity-60 transition group-hover:rotate-180" />}
+                  {n.children && <ChevronDown className="h-3 w-3 opacity-50 transition group-hover:rotate-180" />}
                 </L>
                 {n.children && (
-                  <div className="invisible absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 opacity-0 transition duration-200 group-hover:visible group-hover:opacity-100">
-                    <div className="min-w-56 border bg-popover py-3 shadow-[var(--shadow-soft)]">
+                  <div className="invisible absolute left-0 top-full z-50 -mt-1 translate-y-2 opacity-0 transition duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                    <div className="min-w-64 border bg-popover py-4 shadow-[var(--shadow-soft)]">
                       {n.children.map((c) => (
-                        <L key={c.label} to={c.to} search={c.search} hash={c.hash} className="block px-6 py-2.5 text-sm transition hover:bg-secondary hover:pl-7 hover:text-accent">
+                        <L key={c.label} to={c.to} search={c.search} hash={c.hash} className="block px-7 py-2.5 font-serif text-xl transition hover:pl-9 hover:text-accent">
                           {c.label}
                         </L>
                       ))}
@@ -70,12 +70,13 @@ export function SiteHeader() {
               </div>
             ))}
           </nav>
-          <button className="md:hidden" onClick={() => setOpen(!open)} aria-label="Menu">
+          <Link to="/contact" className="hidden border border-foreground px-6 py-3 text-[0.65rem] font-medium uppercase tracking-[0.24em] transition hover:bg-primary hover:text-primary-foreground lg:inline-block">Book a visit</Link>
+          <button className="lg:hidden" onClick={() => setOpen(!open)} aria-label="Menu">
             {open ? <X /> : <Menu />}
           </button>
         </div>
         {open && (
-          <nav className="border-t px-6 py-4 md:hidden">
+          <nav className="border-t px-6 py-4 lg:hidden">
             {NAV.map((n) => (
               <div key={n.label} className="border-b py-3 last:border-0">
                 <L to={n.to} onClick={() => setOpen(false)} className="block font-serif text-2xl">{n.label}</L>
@@ -95,8 +96,8 @@ export function SiteHeader() {
 
 export function SiteFooter() {
   return (
-    <footer className="mt-32 border-t bg-card">
-      <div className="mx-auto max-w-7xl px-6 py-20">
+    <footer className="mt-40 border-t bg-card">
+      <div className="mx-auto max-w-[1440px] px-6 py-24 md:px-12">
         <p className="font-serif text-5xl md:text-7xl">Dawson Wells <em className="text-accent">Gallery</em></p>
         <div className="mt-16 grid gap-12 border-t border-border pt-12 md:grid-cols-4">
           <div className="text-sm opacity-80 md:col-span-2 max-w-sm">
@@ -124,11 +125,14 @@ export function SiteFooter() {
 
 export function PageHeader({ eyebrow, title, intro }: { eyebrow: string; title: string; intro?: string }) {
   return (
-    <section className="mx-auto max-w-7xl px-6 pb-16 pt-24 text-center">
-      <p className="eyebrow">{eyebrow}</p>
-      <h1 className="mx-auto mt-5 max-w-6xl text-7xl leading-[0.88] md:text-[9rem]">{title}</h1>
-      <div className="mx-auto mt-8 h-px w-16 bg-accent" />
-      {intro && <p className="mx-auto mt-8 max-w-2xl text-lg text-muted-foreground">{intro}</p>}
+    <section className="mx-auto max-w-[1440px] px-6 pb-20 pt-28 md:px-12 md:pt-36">
+      <div className="grid gap-10 border-b pb-16 md:grid-cols-[1fr_auto] md:items-end">
+        <div>
+          <p className="eyebrow flex items-center gap-4"><span className="h-px w-10 bg-accent" />{eyebrow}</p>
+          <h1 className="mt-8 text-7xl leading-[0.9] md:text-[8.5rem]">{title}</h1>
+        </div>
+        {intro && <p className="max-w-sm text-base leading-relaxed text-muted-foreground">{intro}</p>}
+      </div>
     </section>
   );
 }

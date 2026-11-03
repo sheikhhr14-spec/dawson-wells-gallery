@@ -38,7 +38,7 @@ function Artworks() {
     <>
       <PageHeader eyebrow="The collection" title={label ?? "Artworks"} intro="Every work in the Dawson Wells collection, available to view in person at the gallery." />
       <div className="sticky top-20 z-30 border-y bg-background/95 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-4 px-6 py-4">
+        <div className="mx-auto flex max-w-[1440px] flex-wrap items-center gap-4 px-6 py-4">
           <div className="flex flex-wrap gap-2">
             <Link to="/artworks" search={{}} className={`px-4 py-2 text-sm border ${!category ? "bg-primary text-primary-foreground border-primary" : "hover:border-foreground"}`}>All</Link>
             {CATEGORIES.map((c) => (
@@ -58,7 +58,7 @@ function Artworks() {
           </div>
         </div>
       </div>
-      <section className="mx-auto max-w-7xl px-6 pt-12">
+      <section className="mx-auto max-w-[1440px] px-6 pt-12">
         <p className="eyebrow mb-10">{list.length} works</p>
         {list.length ? (
           <div className="grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">{list.map((a) => <ArtworkCard key={a.slug} a={a} />)}</div>

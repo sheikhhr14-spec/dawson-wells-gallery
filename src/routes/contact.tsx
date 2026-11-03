@@ -25,7 +25,7 @@ function Contact() {
   return (
     <>
       <PageHeader eyebrow="Contact" title="Visit & Enquire" />
-      <section className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-[1fr_1.4fr]">
+      <section className="mx-auto grid max-w-[1440px] gap-16 px-6 md:grid-cols-[1fr_1.4fr]">
         <div className="space-y-10 text-sm">
           <div><p className="eyebrow mb-3">Address</p><p className="font-serif text-2xl">New York, NY</p></div>
           <div><p className="eyebrow mb-3">Opening hours</p><p>Tuesday – Saturday · 11:00 – 18:00</p><p className="text-muted-foreground">Private viewings by appointment</p></div>

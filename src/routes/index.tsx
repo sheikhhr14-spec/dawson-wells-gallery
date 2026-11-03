@@ -22,10 +22,10 @@ function Home() {
   return (
     <>
       {/* Immersive hero */}
-      <section className="mx-auto grid max-w-7xl gap-10 px-6 pb-20 pt-12 lg:min-h-[calc(100vh-9rem)] lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+      <section className="mx-auto grid max-w-[1440px] gap-10 px-6 md:px-12 pb-20 pt-12 lg:min-h-[calc(100vh-9rem)] lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div className="order-2 lg:order-1">
           <p className="eyebrow !text-accent">Now on view · Surface &amp; Silence</p>
-          <h1 className="mt-6 text-[clamp(4rem,10vw,9.5rem)] leading-[0.85]">
+          <h1 className="mt-6 text-[clamp(4.5rem,10vw,10rem)] leading-[0.85]">
             See<br /><em className="text-accent">slowly.</em>
           </h1>
           <p className="mt-8 max-w-md text-lg text-muted-foreground">Modern and contemporary works from the Dawson Wells collection — presented to be experienced in person.</p>
@@ -47,7 +47,7 @@ function Home() {
       </section>
 
       {/* Marquee */}
-      <div className="overflow-hidden border-y bg-primary py-5 text-primary-foreground">
+      <div className="overflow-hidden border-y bg-primary py-6 text-primary-foreground">
         <div className="flex w-max animate-[marquee_30s_linear_infinite] gap-12 whitespace-nowrap font-serif text-4xl italic">
           {[...CATEGORIES, ...CATEGORIES, ...CATEGORIES].map((c, i) => (
             <span key={i} className="flex items-center gap-12">{c.label}<span className="not-italic text-accent">✦</span></span>
@@ -56,7 +56,7 @@ function Home() {
       </div>
 
       {/* Statement */}
-      <section className="mx-auto max-w-7xl px-6 py-32">
+      <section className="mx-auto max-w-[1440px] px-6 md:px-12 py-44">
         <p className="eyebrow">Dawson Wells Gallery</p>
         <p className="mt-8 max-w-5xl font-serif text-5xl leading-[1.05] md:text-7xl">
           Modern and contemporary art with <em className="text-accent">presence</em> — chosen to be experienced in the room, not on a screen.
@@ -64,7 +64,7 @@ function Home() {
       </section>
 
       {/* Expressive asymmetric works */}
-      <section className="mx-auto max-w-7xl px-6">
+      <section className="mx-auto max-w-[1440px] px-6">
         <div className="mb-14 flex items-end justify-between border-b pb-6">
           <h2 className="text-6xl md:text-8xl">Selected <em>works</em></h2>
           <Link to="/artworks" className="hidden items-center gap-2 text-xs uppercase tracking-[0.2em] hover:text-accent md:flex">All {ARTWORKS.length} works <ArrowUpRight className="h-4 w-4" /></Link>
@@ -97,7 +97,7 @@ function Home() {
       <section className="relative mt-40 overflow-hidden">
         <img src={IMAGES.interior} alt="Gallery interior" loading="lazy" className="h-[80vh] w-full object-cover" />
         <div className="absolute inset-0 bg-foreground/20" />
-        <div className="absolute inset-0 mx-auto flex max-w-7xl items-center px-6">
+        <div className="absolute inset-0 mx-auto flex max-w-[1440px] items-center px-6">
           <div className="max-w-lg bg-background p-10 shadow-[var(--shadow-soft)] md:p-14">
             <p className="eyebrow !text-accent">Visit</p>
             <h2 className="mt-4 text-5xl md:text-6xl">Experience it <em>in person.</em></h2>
@@ -108,7 +108,7 @@ function Home() {
       </section>
 
       {/* News */}
-      <section className="mx-auto max-w-7xl px-6 pt-40">
+      <section className="mx-auto max-w-[1440px] px-6 md:px-12 pt-40">
         <h2 className="text-6xl md:text-8xl">News &amp; <em className="text-accent">Updates</em></h2>
         <div className="mt-14 divide-y border-y">
           {POSTS.map((p) => (
