@@ -22,25 +22,28 @@ function Home() {
   return (
     <>
       {/* Immersive hero */}
-      <section className="relative h-[calc(100vh-9rem)] min-h-[640px] overflow-hidden">
-        <img src={IMAGES.hero} alt="Ochre Threshold, oil and wax on canvas" width={1920} height={1088} className="absolute inset-0 h-full w-full scale-110 object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/50 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-        <div className="relative mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-16">
+      <section className="mx-auto grid max-w-7xl gap-10 px-6 pb-20 pt-12 lg:min-h-[calc(100vh-9rem)] lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div className="order-2 lg:order-1">
           <p className="eyebrow !text-accent">Now on view · Surface &amp; Silence</p>
-          <h1 className="mt-6 text-[clamp(4rem,12vw,11rem)] leading-[0.82]">
+          <h1 className="mt-6 text-[clamp(4rem,10vw,9.5rem)] leading-[0.85]">
             See<br /><em className="text-accent">slowly.</em>
           </h1>
+          <p className="mt-8 max-w-md text-lg text-muted-foreground">Modern and contemporary works from the Dawson Wells collection — presented to be experienced in person.</p>
           <div className="mt-10 flex flex-wrap items-center gap-6">
-            <Link to="/artworks" className="group inline-flex items-center gap-3 bg-accent px-8 py-5 text-xs uppercase tracking-[0.2em] text-accent-foreground transition hover:bg-primary hover:text-primary-foreground">
+            <Link to="/artworks" className="group inline-flex items-center gap-3 bg-primary px-8 py-5 text-xs uppercase tracking-[0.2em] text-primary-foreground transition hover:bg-accent">
               Explore the collection <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
             </Link>
             <Link to="/contact" className="text-xs uppercase tracking-[0.2em] underline-offset-8 hover:underline">Plan a visit — New York, NY</Link>
           </div>
         </div>
-        <p className="absolute bottom-6 right-6 hidden text-right text-xs text-muted-foreground md:block">
-          <em className="font-serif text-base text-foreground">Ochre Threshold</em>, 2024<br />Oil and wax on canvas
-        </p>
+        <figure className="order-1 lg:order-2">
+          <div className="overflow-hidden shadow-[var(--shadow-soft)]">
+            <img src={IMAGES.hero} alt="Ochre Threshold, oil and wax on canvas" width={1920} height={1088} className="aspect-[4/5] w-full scale-[1.6] object-cover lg:aspect-[5/6]" />
+          </div>
+          <figcaption className="mt-4 flex justify-between text-xs text-muted-foreground">
+            <span><em className="font-serif text-base text-foreground">Ochre Threshold</em>, 2024</span><span>Oil and wax on canvas</span>
+          </figcaption>
+        </figure>
       </section>
 
       {/* Marquee */}
