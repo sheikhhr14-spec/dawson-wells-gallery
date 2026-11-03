@@ -17,7 +17,8 @@ export const Route = createFileRoute("/news/")({
 const fmt = (d: string) => new Date(d).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
 
 function News() {
-  const [lead, ...rest] = POSTS;
+  const lead = POSTS[0]!;
+  const rest = POSTS.slice(1);
   return (
     <>
       <PageHeader eyebrow="Journal" title="News & Updates" />
