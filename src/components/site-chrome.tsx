@@ -38,7 +38,7 @@ export function SiteHeader() {
           <span className="hidden opacity-80 sm:block">Tue – Sat · 11:00 – 18:00</span>
         </div>
       </div>
-      <div className="border-b bg-background/95 backdrop-blur">
+      <div className="border-b bg-background">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:flex-col md:gap-5">
           <Link to="/" className="text-center leading-none">
             <span className="block font-serif text-3xl tracking-tight md:text-4xl">Dawson <em className="text-accent">Wells</em></span>
