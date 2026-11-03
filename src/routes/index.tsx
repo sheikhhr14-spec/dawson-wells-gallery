@@ -70,7 +70,7 @@ function Home() {
           <Work a={a0!} className="col-span-12 md:col-span-7 md:row-span-2" tall />
           <Work a={a4!} className="col-span-12 md:col-span-5" />
           <Work a={a1!} className="col-span-12 md:col-span-5" />
-          <Work a={a11(a5!)} className="col-span-12 md:col-span-4 md:mt-24" />
+          <Work a={a5!} className="col-span-12 md:col-span-4 md:mt-24" />
           <Work a={a3!} className="col-span-12 md:col-span-4" />
           <Work a={a2!} className="col-span-12 md:col-span-4 md:mt-40" />
         </div>
@@ -122,7 +122,6 @@ function Home() {
   );
 }
 
-const a11 = <T,>(x: T) => x;
 
 function Work({ a, className, tall }: { a: (typeof ARTWORKS)[number]; className?: string; tall?: boolean }) {
   return (
