@@ -37,12 +37,12 @@ function Detail() {
   ];
   return (
     <>
-      <div className="mx-auto max-w-7xl px-6 pt-10">
+      <div className="mx-auto max-w-[1440px] px-6 md:px-12 pt-10">
         <Link to="/artworks" search={{ category: a.category }} className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
           <ArrowLeft className="h-4 w-4" /> {cat.label}
         </Link>
       </div>
-      <section className="mx-auto grid max-w-7xl gap-12 px-6 pt-8 lg:grid-cols-[1.4fr_1fr]">
+      <section className="mx-auto grid max-w-[1440px] gap-12 px-6 md:px-12 pt-8 lg:grid-cols-[1.4fr_1fr]">
         <div>
           <div className="flex aspect-[4/5] items-center justify-center bg-card p-6 md:p-12">
             <img key={i} src={a.images[i]} alt={a.title} className="max-h-full max-w-full object-contain animate-in fade-in duration-500" />
@@ -73,7 +73,7 @@ function Detail() {
         </div>
       </section>
       {related.length > 0 && (
-        <section className="mx-auto max-w-7xl px-6 pt-32">
+        <section className="mx-auto max-w-[1440px] px-6 md:px-12 pt-32">
           <h2 className="mb-10 text-4xl">More {cat.label.toLowerCase()}</h2>
           <div className="grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">{related.map((r) => <ArtworkCard key={r.slug} a={r} />)}</div>
         </section>

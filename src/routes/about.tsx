@@ -19,7 +19,7 @@ function About() {
   return (
     <>
       <PageHeader eyebrow="About" title="The Gallery" intro="A focused collection of modern and contemporary art, presented with the care it deserves." />
-      <img src={IMAGES.interior} alt="Gallery interior" className="mx-auto aspect-[21/9] w-full max-w-7xl object-cover px-6" />
+      <img src={IMAGES.interior} alt="Gallery interior" className="mx-auto aspect-[21/9] w-full max-w-[1440px] object-cover px-6 md:px-12" />
       <div className="pt-24"><MissionVision /></div>
       <div className="pt-24"><CompanyOverview /></div>
       <div className="mt-16 flex justify-center gap-6 text-xs uppercase tracking-[0.22em]">

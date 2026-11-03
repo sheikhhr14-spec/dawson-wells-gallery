@@ -1,6 +1,6 @@
 export function MissionVision() {
   return (
-    <section className="mx-auto grid max-w-7xl gap-px bg-border px-0 md:grid-cols-2">
+    <section className="mx-auto grid max-w-[1440px] gap-px bg-border px-0 md:grid-cols-2">
       {[
         ["Mission", "To bring people closer to remarkable work.", "We present art that rewards attention — chosen for quality, material integrity and lasting presence — and create the conditions for visitors to encounter it fully."],
         ["Vision", "A gallery recognised worldwide for its eye.", "To become an internationally respected destination for modern and contemporary art, known for considered presentation and meaningful visitor experiences."],

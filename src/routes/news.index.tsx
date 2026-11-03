@@ -22,7 +22,7 @@ function News() {
   return (
     <>
       <PageHeader eyebrow="Journal" title="News & Updates" />
-      <section className="mx-auto max-w-7xl px-6">
+      <section className="mx-auto max-w-[1440px] px-6 md:px-12">
         <Link to="/news/$slug" params={{ slug: lead.slug }} className="group grid gap-10 md:grid-cols-2">
           <div className="aspect-[4/3] overflow-hidden"><img src={lead.image} alt="" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" /></div>
           <div className="self-center">
