@@ -15,7 +15,7 @@ export const Route = createFileRoute("/about_/company-overview")({
   component: () => (
     <>
       <PageHeader eyebrow="About" title="Company Overview" />
-      <img src={IMAGES.interior} alt="Gallery interior" className="mx-auto mb-24 aspect-[21/9] w-full max-w-[1440px] object-cover px-6" />
+      <img src={IMAGES.interior} alt="Gallery interior" className="mx-auto mb-24 aspect-[21/9] w-full max-w-[1440px] object-cover px-6 md:px-12" />
       <CompanyOverview />
     </>
   ),

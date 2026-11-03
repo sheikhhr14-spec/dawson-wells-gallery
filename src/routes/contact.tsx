@@ -25,7 +25,7 @@ function Contact() {
   return (
     <>
       <PageHeader eyebrow="Contact" title="Visit & Enquire" />
-      <section className="mx-auto grid max-w-[1440px] gap-16 px-6 md:grid-cols-[1fr_1.4fr]">
+      <section className="mx-auto grid max-w-[1440px] gap-16 px-6 md:px-12 md:grid-cols-[1fr_1.4fr]">
         <div className="space-y-10 text-sm">
           <div><p className="eyebrow mb-3">Address</p><p className="font-serif text-2xl">New York, NY</p></div>
           <div><p className="eyebrow mb-3">Opening hours</p><p>Tuesday – Saturday · 11:00 – 18:00</p><p className="text-muted-foreground">Private viewings by appointment</p></div>
@@ -52,7 +52,7 @@ function Contact() {
             </select>
             {artwork && <input defaultValue={artwork} className={`${field} sm:col-span-2`} aria-label="Artwork" />}
             <textarea required rows={5} placeholder="Your message" className={`${field} sm:col-span-2 resize-none`} />
-            <button className="bg-primary px-8 py-4 text-sm text-primary-foreground hover:bg-accent sm:col-span-2 sm:justify-self-start">Send enquiry</button>
+            <button className="bg-primary px-10 py-5 text-[0.68rem] font-medium uppercase tracking-[0.24em] text-primary-foreground transition hover:bg-accent sm:col-span-2 sm:justify-self-start">Send enquiry</button>
           </form>
         )}
       </section>

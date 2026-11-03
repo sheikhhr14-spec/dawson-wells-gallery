@@ -33,7 +33,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40">
       <div className="bg-primary text-primary-foreground">
-        <div className="mx-auto flex h-8 max-w-[1440px] items-center justify-between px-6 text-[0.6rem] font-medium uppercase tracking-[0.32em] md:px-12">
+        <div className="mx-auto flex h-8 max-w-[1440px] items-center justify-between px-6 md:px-12 text-[0.6rem] font-medium uppercase tracking-[0.32em] md:px-12">
           <span className="opacity-80">Now on view — Surface &amp; Silence</span>
           <span className="hidden opacity-80 sm:block">Tue – Sat · 11:00 – 18:00</span>
         </div>
@@ -97,7 +97,7 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="mt-40 border-t bg-card">
-      <div className="mx-auto max-w-[1440px] px-6 py-24 md:px-12">
+      <div className="mx-auto max-w-[1440px] px-6 md:px-12 py-24 md:px-12">
         <p className="font-serif text-5xl md:text-7xl">Dawson Wells <em className="text-accent">Gallery</em></p>
         <div className="mt-16 grid gap-12 border-t border-border pt-12 md:grid-cols-4">
           <div className="text-sm opacity-80 md:col-span-2 max-w-sm">
@@ -125,7 +125,7 @@ export function SiteFooter() {
 
 export function PageHeader({ eyebrow, title, intro }: { eyebrow: string; title: string; intro?: string }) {
   return (
-    <section className="mx-auto max-w-[1440px] px-6 pb-20 pt-28 md:px-12 md:pt-36">
+    <section className="mx-auto max-w-[1440px] px-6 md:px-12 pb-20 pt-28 md:px-12 md:pt-36">
       <div className="grid gap-10 border-b pb-16 md:grid-cols-[1fr_auto] md:items-end">
         <div>
           <p className="eyebrow flex items-center gap-4"><span className="h-px w-10 bg-accent" />{eyebrow}</p>

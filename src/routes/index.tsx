@@ -64,7 +64,7 @@ function Home() {
       </section>
 
       {/* Expressive asymmetric works */}
-      <section className="mx-auto max-w-[1440px] px-6">
+      <section className="mx-auto max-w-[1440px] px-6 md:px-12">
         <div className="mb-14 flex items-end justify-between border-b pb-6">
           <h2 className="text-6xl md:text-8xl">Selected <em>works</em></h2>
           <Link to="/artworks" className="hidden items-center gap-2 text-xs uppercase tracking-[0.2em] hover:text-accent md:flex">All {ARTWORKS.length} works <ArrowUpRight className="h-4 w-4" /></Link>
@@ -97,7 +97,7 @@ function Home() {
       <section className="relative mt-40 overflow-hidden">
         <img src={IMAGES.interior} alt="Gallery interior" loading="lazy" className="h-[80vh] w-full object-cover" />
         <div className="absolute inset-0 bg-foreground/20" />
-        <div className="absolute inset-0 mx-auto flex max-w-[1440px] items-center px-6">
+        <div className="absolute inset-0 mx-auto flex max-w-[1440px] items-center px-6 md:px-12">
           <div className="max-w-lg bg-background p-10 shadow-[var(--shadow-soft)] md:p-14">
             <p className="eyebrow !text-accent">Visit</p>
             <h2 className="mt-4 text-5xl md:text-6xl">Experience it <em>in person.</em></h2>
