@@ -42,7 +42,7 @@ export function SiteHeader() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:flex-col md:gap-5">
           <Link to="/" className="text-center leading-none">
             <span className="block font-serif text-3xl tracking-tight md:text-4xl">Dawson Wells</span>
-            <span className="mt-1 block text-[0.62rem] uppercase tracking-[0.5em] text-muted-foreground">Gallery · Est. London</span>
+            <span className="mt-1 block text-[0.62rem] uppercase tracking-[0.5em] text-muted-foreground">Gallery · New York</span>
           </Link>
           <nav className="hidden items-center gap-1 md:flex">
             {NAV.map((n) => (
@@ -104,8 +104,7 @@ export function SiteFooter() {
           </div>
           <div className="text-sm">
             <p className="mb-4 text-[0.68rem] uppercase tracking-[0.25em] opacity-60">Visit</p>
-            <p>24 Mercer Lane</p>
-            <p>London W1 · United Kingdom</p>
+            <p>New York, NY</p>
             <p className="mt-2 opacity-60">Tue–Sat, 11:00–18:00</p>
           </div>
           <div className="text-sm">
