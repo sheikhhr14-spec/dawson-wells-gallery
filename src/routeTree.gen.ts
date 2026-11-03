@@ -12,6 +12,8 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AboutCompanyOverviewRouteImport } from './routes/about_.company-overview'
+import { Route as AboutMissionVisionRouteImport } from './routes/about_.mission-vision'
 import { Route as ArtworksIndexRouteImport } from './routes/artworks.index'
 import { Route as ArtworksSlugRouteImport } from './routes/artworks.$slug'
 import { Route as NewsIndexRouteImport } from './routes/news.index'
@@ -30,6 +32,16 @@ const AboutRoute = AboutRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutCompanyOverviewRoute = AboutCompanyOverviewRouteImport.update({
+  id: '/about_/company-overview',
+  path: '/about/company-overview',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutMissionVisionRoute = AboutMissionVisionRouteImport.update({
+  id: '/about_/mission-vision',
+  path: '/about/mission-vision',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ArtworksIndexRoute = ArtworksIndexRouteImport.update({
@@ -57,6 +69,8 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/about/company-overview': typeof AboutCompanyOverviewRoute
+  '/about/mission-vision': typeof AboutMissionVisionRoute
   '/artworks/$slug': typeof ArtworksSlugRoute
   '/news/$slug': typeof NewsSlugRoute
   '/artworks/': typeof ArtworksIndexRoute
@@ -66,6 +80,8 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/about/company-overview': typeof AboutCompanyOverviewRoute
+  '/about/mission-vision': typeof AboutMissionVisionRoute
   '/artworks/$slug': typeof ArtworksSlugRoute
   '/news/$slug': typeof NewsSlugRoute
   '/artworks': typeof ArtworksIndexRoute
@@ -76,6 +92,8 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/about_/company-overview': typeof AboutCompanyOverviewRoute
+  '/about_/mission-vision': typeof AboutMissionVisionRoute
   '/artworks/$slug': typeof ArtworksSlugRoute
   '/news/$slug': typeof NewsSlugRoute
   '/artworks/': typeof ArtworksIndexRoute
@@ -87,6 +105,8 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/about/company-overview'
+    | '/about/mission-vision'
     | '/artworks/$slug'
     | '/news/$slug'
     | '/artworks/'
@@ -96,6 +116,8 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/about/company-overview'
+    | '/about/mission-vision'
     | '/artworks/$slug'
     | '/news/$slug'
     | '/artworks'
@@ -105,6 +127,8 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/about_/company-overview'
+    | '/about_/mission-vision'
     | '/artworks/$slug'
     | '/news/$slug'
     | '/artworks/'
@@ -115,6 +139,8 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
+  AboutCompanyOverviewRoute: typeof AboutCompanyOverviewRoute
+  AboutMissionVisionRoute: typeof AboutMissionVisionRoute
   ArtworksSlugRoute: typeof ArtworksSlugRoute
   NewsSlugRoute: typeof NewsSlugRoute
   ArtworksIndexRoute: typeof ArtworksIndexRoute
@@ -142,6 +168,20 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about_/company-overview': {
+      id: '/about_/company-overview'
+      path: '/about/company-overview'
+      fullPath: '/about/company-overview'
+      preLoaderRoute: typeof AboutCompanyOverviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about_/mission-vision': {
+      id: '/about_/mission-vision'
+      path: '/about/mission-vision'
+      fullPath: '/about/mission-vision'
+      preLoaderRoute: typeof AboutMissionVisionRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/artworks/': {
@@ -179,6 +219,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
+  AboutCompanyOverviewRoute: AboutCompanyOverviewRoute,
+  AboutMissionVisionRoute: AboutMissionVisionRoute,
   ArtworksSlugRoute: ArtworksSlugRoute,
   NewsSlugRoute: NewsSlugRoute,
   ArtworksIndexRoute: ArtworksIndexRoute,

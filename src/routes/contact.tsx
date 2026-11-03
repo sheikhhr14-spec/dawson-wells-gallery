@@ -37,7 +37,7 @@ function Contact() {
             <p className="mt-4 text-muted-foreground">Your enquiry has been received. A confirmation email is on its way and our team will reply within two working days.</p>
           </div>
         ) : (
-          <form
+          <form id="inquiry"
             className="grid gap-8 sm:grid-cols-2"
             onSubmit={(e) => { e.preventDefault(); setSent(true); toast.success("Enquiry sent"); }}
           >
