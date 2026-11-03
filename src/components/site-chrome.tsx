@@ -32,7 +32,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40">
-      <div className="bg-accent text-accent-foreground">
+      <div className="bg-primary text-primary-foreground">
         <div className="mx-auto flex h-9 max-w-7xl items-center justify-between px-6 text-[0.68rem] uppercase tracking-[0.25em]">
           <span className="opacity-80">Now on view — Surface &amp; Silence</span>
           <span className="hidden opacity-80 sm:block">Tue – Sat · 11:00 – 18:00</span>

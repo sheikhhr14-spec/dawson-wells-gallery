@@ -24,7 +24,7 @@ function Home() {
       {/* Immersive hero */}
       <section className="relative h-[calc(100vh-9rem)] min-h-[640px] overflow-hidden">
         <img src={IMAGES.hero} alt="Ochre Threshold, oil and wax on canvas" width={1920} height={1088} className="absolute inset-0 h-full w-full scale-110 object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/50 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
         <div className="relative mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-16">
           <p className="eyebrow !text-accent">Now on view · Surface &amp; Silence</p>
@@ -44,10 +44,10 @@ function Home() {
       </section>
 
       {/* Marquee */}
-      <div className="overflow-hidden border-y bg-accent py-5 text-accent-foreground">
+      <div className="overflow-hidden border-y bg-primary py-5 text-primary-foreground">
         <div className="flex w-max animate-[marquee_30s_linear_infinite] gap-12 whitespace-nowrap font-serif text-4xl italic">
           {[...CATEGORIES, ...CATEGORIES, ...CATEGORIES].map((c, i) => (
-            <span key={i} className="flex items-center gap-12">{c.label}<span className="not-italic">✦</span></span>
+            <span key={i} className="flex items-center gap-12">{c.label}<span className="not-italic text-accent">✦</span></span>
           ))}
         </div>
       </div>
@@ -80,7 +80,7 @@ function Home() {
       <section className="mt-40 grid md:grid-cols-5">
         {CATEGORIES.map((c, i) => (
           <Link key={c.slug} to="/artworks" search={{ category: c.slug }} className="group relative aspect-[3/4] overflow-hidden md:aspect-[2/3]">
-            <img src={catImg(c.slug)} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-60 grayscale transition duration-700 group-hover:scale-110 group-hover:opacity-100 group-hover:grayscale-0" />
+            <img src={catImg(c.slug)} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-90 grayscale transition duration-700 group-hover:scale-110 group-hover:opacity-100 group-hover:grayscale-0" />
             <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-6">
               <span className="eyebrow">0{i + 1}</span>
@@ -93,9 +93,9 @@ function Home() {
       {/* Visit split */}
       <section className="relative mt-40 overflow-hidden">
         <img src={IMAGES.interior} alt="Gallery interior" loading="lazy" className="h-[80vh] w-full object-cover" />
-        <div className="absolute inset-0 bg-background/40" />
+        <div className="absolute inset-0 bg-foreground/20" />
         <div className="absolute inset-0 mx-auto flex max-w-7xl items-center px-6">
-          <div className="max-w-lg bg-background p-10 md:p-14">
+          <div className="max-w-lg bg-background p-10 shadow-[var(--shadow-soft)] md:p-14">
             <p className="eyebrow !text-accent">Visit</p>
             <h2 className="mt-4 text-5xl md:text-6xl">Experience it <em>in person.</em></h2>
             <p className="mt-6 text-muted-foreground">New York, NY · Tuesday – Saturday, 11:00 – 18:00. Private viewings by appointment.</p>
