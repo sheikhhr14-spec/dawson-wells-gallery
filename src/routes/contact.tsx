@@ -27,9 +27,9 @@ function Contact() {
       <PageHeader eyebrow="Contact" title="Visit & Enquire" />
       <section className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-[1fr_1.4fr]">
         <div className="space-y-10 text-sm">
-          <div><p className="eyebrow mb-3">Address</p><p className="font-serif text-2xl">24 Mercer Lane<br />London W1, United Kingdom</p></div>
+          <div><p className="eyebrow mb-3">Address</p><p className="font-serif text-2xl">New York, NY</p></div>
           <div><p className="eyebrow mb-3">Opening hours</p><p>Tuesday – Saturday · 11:00 – 18:00</p><p className="text-muted-foreground">Private viewings by appointment</p></div>
-          <div><p className="eyebrow mb-3">Enquiries</p><p>info@dawsonwells.gallery</p><p>+44 20 0000 0000</p></div>
+          <div><p className="eyebrow mb-3">Enquiries</p><p>info@dawsonwells.gallery</p><p>+1 (212) 000-0000</p></div>
         </div>
         {sent ? (
           <div className="flex flex-col justify-center border bg-card p-12">

@@ -38,11 +38,11 @@ export function SiteHeader() {
           <span className="hidden opacity-80 sm:block">Tue – Sat · 11:00 – 18:00</span>
         </div>
       </div>
-      <div className="border-b bg-background/95 backdrop-blur">
+      <div className="border-b bg-background">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:flex-col md:gap-5">
           <Link to="/" className="text-center leading-none">
-            <span className="block font-serif text-3xl tracking-tight md:text-4xl">Dawson Wells</span>
-            <span className="mt-1 block text-[0.62rem] uppercase tracking-[0.5em] text-muted-foreground">Gallery · Est. London</span>
+            <span className="block font-serif text-3xl tracking-tight md:text-4xl">Dawson <em className="text-accent">Wells</em></span>
+            <span className="mt-1 block text-[0.62rem] uppercase tracking-[0.5em] text-muted-foreground">Gallery · New York</span>
           </Link>
           <nav className="hidden items-center gap-1 md:flex">
             {NAV.map((n) => (
@@ -95,17 +95,16 @@ export function SiteHeader() {
 
 export function SiteFooter() {
   return (
-    <footer className="mt-32 bg-primary text-primary-foreground">
+    <footer className="mt-32 border-t bg-card">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <p className="font-serif text-5xl md:text-7xl">Dawson Wells <em className="text-accent">Gallery</em></p>
-        <div className="mt-16 grid gap-12 border-t border-primary-foreground/15 pt-12 md:grid-cols-4">
+        <div className="mt-16 grid gap-12 border-t border-border pt-12 md:grid-cols-4">
           <div className="text-sm opacity-80 md:col-span-2 max-w-sm">
             Modern and contemporary art, presented with care. Visit us in person to experience the collection.
           </div>
           <div className="text-sm">
             <p className="mb-4 text-[0.68rem] uppercase tracking-[0.25em] opacity-60">Visit</p>
-            <p>24 Mercer Lane</p>
-            <p>London W1 · United Kingdom</p>
+            <p>New York, NY</p>
             <p className="mt-2 opacity-60">Tue–Sat, 11:00–18:00</p>
           </div>
           <div className="text-sm">
@@ -116,7 +115,7 @@ export function SiteFooter() {
           </div>
         </div>
       </div>
-      <div className="border-t border-primary-foreground/15 py-6 text-center text-[0.68rem] uppercase tracking-[0.25em] opacity-60">
+      <div className="border-t border-border py-6 text-center text-[0.68rem] uppercase tracking-[0.25em] opacity-60">
         © 2026 Dawson Wells Gallery · All rights reserved
       </div>
     </footer>
@@ -127,7 +126,7 @@ export function PageHeader({ eyebrow, title, intro }: { eyebrow: string; title: 
   return (
     <section className="mx-auto max-w-7xl px-6 pb-16 pt-24 text-center">
       <p className="eyebrow">{eyebrow}</p>
-      <h1 className="mx-auto mt-5 max-w-5xl text-6xl leading-[0.95] md:text-8xl">{title}</h1>
+      <h1 className="mx-auto mt-5 max-w-6xl text-7xl leading-[0.88] md:text-[9rem]">{title}</h1>
       <div className="mx-auto mt-8 h-px w-16 bg-accent" />
       {intro && <p className="mx-auto mt-8 max-w-2xl text-lg text-muted-foreground">{intro}</p>}
     </section>
